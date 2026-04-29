@@ -176,6 +176,7 @@ def game_loop(win):
             snake.pop()
 
         # Draw everything
+        win.clear()
         draw_border(win)
         draw_snake(win, snake)
         draw_food(win, food)
