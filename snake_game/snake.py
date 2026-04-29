@@ -42,6 +42,14 @@ def draw_snake(win, snake):
         else:
             win.addch(y, x, "#")
 
+def draw_box(win):
+    # Top and bottom borders
+    for x in range(0, WIDTH):
+        win.addch(HEIGHT, x, "-")
+
+    # Left and right borders
+    for y in range(0, HEIGHT + 1):
+        win.addch(y, WIDTH, "|")
 
 def draw_food(win, food):
     win.addch(food[0], food[1], "*")
@@ -177,6 +185,7 @@ def game_loop(win):
 
         # Draw everything
         win.clear()
+        draw_box(win)
         draw_border(win)
         draw_snake(win, snake)
         draw_food(win, food)
