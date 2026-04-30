@@ -61,8 +61,8 @@ def draw_score(win, score):
 
 def spawn_food(snake):
     while True:
-        y = random.randint(1, HEIGHT)
-        x = random.randint(1, WIDTH)
+        y = random.randint(2, HEIGHT - 1)
+        x = random.randint(2, WIDTH - 1)
         if (y, x) not in snake:
             return (y, x)
 
